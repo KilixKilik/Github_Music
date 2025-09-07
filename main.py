@@ -19,9 +19,6 @@ headers = {
 media_sessions = None
 
 async def get_media_info():
-    """
-    Получает текущий трек из любого приложения (Spotify, Яндекс.Музыка, браузер и т.д.)
-    """
     global media_sessions
     try:
         if media_sessions is None:
@@ -46,9 +43,6 @@ async def get_media_info():
         return None
 
 def update_github_bio(text):
-    """
-    Обновляет bio в профиле GitHub
-    """
     url = "https://api.github.com/user"
     bio_text = f"🎧 Сейчас слушаю: {text}" if text else "Python dev | Coding to the beat 🎵"
     data = {"bio": bio_text}
